@@ -1,0 +1,15 @@
+{
+  "name": "envtest",
+  "version": "0.0.0",
+  "description": "Web Browser environment test",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "main": "./dist/main.js",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ]
+}

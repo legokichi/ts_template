@@ -1,0 +1,40 @@
+{
+  "name": "envtest",
+  "license": "MIT",
+  "url": "https://github.com/legokichi/ts_sandbox.js",
+  "scripts": {
+    "setup": "npm install -g grunt-cli gulp-cli bower typings http-server",
+    "init": "npm run update; npm run build",
+    "update": "npm update; bower update; typings install",
+    "build": "npm run clean && tsc   && gulp build&& npm run cake",
+    "start": "http-server -s & tsc -w & gulp watch",
+    "stop": "killall -- node",
+    "tsc": "tsc",
+    "coffee": "coffee -c -b -o lib src/*.coffee",
+    "babel": "babel lib -d es5",
+    "espower": "gulp build",
+    "browserify": "browserify es5/index.js --standalone Shell -o dist/Shell.js",
+    "watchify": "watchify es5/Sandbox/ComponentNamed.js -o dist/ComponentNamed.sandbox.js -v",
+    "check": "tsc -w --noEmit -p ./",
+    "clean": "rm -rf lib/* es5/* dist/*",
+    "reset": "rm -rf bower_components node_modules typings"
+  },
+  "dependencies": {
+    "deep-diff": "^0.3.4",
+    "encoding-japanese": "^1.0.24",
+    "events": "^1.1.0",
+    "jquery": "^3.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-espower": "^1.0.2",
+    "typescript": "^2.0.3",
+    "watchify": "^3.7.0",
+    "@types/node": "^4.0.27-alpha",
+    "tslint": "^3.13.0-dev.0"
+  },
+  "typings": "./lib/index.d.ts",
+  "main": "./es5/index.js"
+}
