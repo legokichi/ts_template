@@ -1,0 +1,12 @@
+{
+  "name": "typescript-test",
+  "dependencies": {},
+  "globalDependencies": {
+    "empower": "registry:dt/empower#1.2.1+20160924120522",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "node": "registry:env/node#6.0.0+20160918225031",
+    "power-assert": "registry:dt/power-assert#1.4.1+20160924120522",
+    "power-assert-formatter": "registry:dt/power-assert-formatter#1.4.1+20160924120522",
+    "qunit": "registry:dt/qunit#1.16.0+20160514172809"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "typescript-test",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm install -g http-server; mkdir lib dist",
+    "init": "npm run update; npm run build",
+    "update": "npm update",
+    "build": "npm run clean && tsc    -p . && browserify lib/index.js --standalone Main -o dist/index.js -t espowerify",
+    "start": "http-server -s & tsc -w -p .  &   watchify lib/index.js --standalone Main -o dist/index.js -t espowerify -v",
+    "stop": "killall -- node",
+    "check": "tsc -w --noEmit -p ./",
+    "lint": "tslint -c ./tslint.json --project ./tsconfig.json --type-check",
+    "clean": "rm -rf lib/* dist/*",
+    "format": "tsfmt --replace --baseDir src",
+    "reset": "rm -rf bower_components node_modules typings"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "espowerify": "^1.0.0",
+    "power-assert": "^1.4.1",
+    "qunit": "^0.9.1",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3",
+    "typescript-formatter": "^3.0.1",
+    "watchify": "^3.7.0"
+  },
+  "typings": "./lib/index.d.ts",
+  "main": "./dist/index.js"
+}

@@ -31,13 +31,13 @@
         //"noImplicitUseStrict": false,
         "noLib": false,
         "noResolve": false,
-        "outDir": "src",
+        "outDir": "lib",
         //"outFile": null,
         "preserveConstEnums": true,
         "pretty": true,
         //"reactNamespace": "React",
         "removeComments": false,
-        "rootDir": "ts",
+        "rootDir": "src",
         "skipDefaultLibCheck": false,
         //"inlineSourceMap": fals,
         //"sourceMap": false,
@@ -64,8 +64,8 @@
         "placeOpenBraceOnNewLineForControlBlocks": true
     },
     "files": [
-        "ts/Main.ts"
-        //"typings/index.d.ts"
+        "src/index.ts",
+        "typings/index.d.ts"
     ],
     "exclude": [
         "node_modules",

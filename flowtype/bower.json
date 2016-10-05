@@ -1,0 +1,15 @@
+{
+  "name": "flowtype-test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ],
+  "dependencies": {
+    "power-assert-formatter": "^1.4.1",
+    "empower": "^1.2.1",
+    "qunit-tap": "^1.5.1",
+    "qunit": "^2.0.1"
+  }
+}
